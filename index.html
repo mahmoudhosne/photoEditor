@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="img">
+        <div class="img-box">
+          <img  id="img" />
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="upload">
+          <label for="upload">upload</label>
+          <input type="file" id="upload" />
+        </div>
+      </div>
+      <div class="filters">
+        <ul>
+          <li>
+            <label for="saturate">Saturate</label>
+            <input type="range" id="saturate" value="100" min="0" max="200" />
+          </li>
+          <li>
+            <label for="contrust">Contrust</label>
+            <input type="range" id="contrust" value="100" min="0" max="200" />
+          </li>
+          <li>
+            <label for="brightness">Brightness</label>
+            <input type="range" id="brightness" value="100" min="0" max="200" />
+          </li>
+          <li>
+            <label for="sepia">Sepia</label>
+            <input type="range" id="sepia" value="0" min="0" max="200" />
+          </li>
+          <li>
+            <label for="grayscale">GrayScale</label>
+            <input
+              type="range"
+              id="grayscale"
+              step="0.1"
+              value="0"
+              min="0"
+              max="200"
+            />
+          </li>
+          <li>
+            <label for="blur">Blur</label>
+            <input
+              type="range"
+              id="blur"
+              value="0"
+              step="0.1"
+              min="0"
+              max="10"
+            />
+          </li>
+          <li>
+            <label for="hue_rotate">Hue Rotate</label>
+            <input type="range" id="hue_rotate"  min="0" max="350" value="0" />
+          </li>
+          <li>
+            <a download="image" id="download">Download</a>
+
+            <span onclick="resetValue()">Reset</span>
+          </li>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
